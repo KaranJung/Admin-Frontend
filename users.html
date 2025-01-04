@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Users | zapNep</title>
+    <style>
+        /* Additional CSS for the user list and buttons */
+        .user-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .user {
+            background-color: var(--color-white);
+            padding: 1.5rem;
+            border-radius: var(--card-border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+        }
+
+        .user:hover {
+            box-shadow: none;
+        }
+
+        .user img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            display: block; /* Ensure the image is treated as a block element */
+            margin-left: auto; /* Center the image horizontally */
+            margin-right: auto; /* Center the image horizontally */
+        }
+
+        .user h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .user p {
+            color: var(--color-dark-variant);
+            margin-bottom: 1rem;
+        }
+
+        .user-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .user-actions button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: var(--border-radius-1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .user-actions button.edit {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .user-actions button.delete {
+            background-color: var(--color-danger);
+            color: var(--color-white);
+        }
+
+        .user-actions button:hover {
+            opacity: 0.8;
+        }
+
+        .add-user {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            cursor: pointer;
+            border: 2px dashed var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .add-user:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="images/zap.png">
+                    <h2>Zap<span class="danger">Nep</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="Dashboard.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="users.html" class="active">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Users</h3>
+                </a>
+                <a href="history.html">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>History</h3>
+                </a>
+                <a href="analytics.html">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="Ticket.html">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <h3>Tickets</h3>
+                    <span class="message-count">27</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale List</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+         
+        <main>
+            <h1>Users</h1>
+            <!-- User List Section -->
+            <div class="user-list">
+                <div class="user">
+                    <img src="images/karan.jpg">
+                    <h2>Karan</h2>
+                    <p>Admin</p>
+                    <div class="user-actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+                <div class="user">
+                    <img src="images/manik.jpg">
+                    <h2>Manik</h2>
+                    <p>Editor</p>
+                    <div class="user-actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+                <div class="user">
+                    <img src="images/prajwol.jpg">
+                    <h2>Prajwol</h2>
+                    <p>Subscriber</p>
+                    <div class="user-actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+                <div class="user add-user">
+                    <img src="images/plus.png">
+                    <h2>Add User</h2>
+                    <p>Click to add</p>
+                </div>
+            </div>
+            <!-- End of User List Section -->
+        </main>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Karan</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/karan.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+        <!-- End of Main Content -->
+    </div>
+
+    <script src="orders.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
